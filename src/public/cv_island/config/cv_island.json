@@ -1,0 +1,375 @@
+{
+  "map": "./cv_island/artwork/data/maps/cv_island.json",
+  "menu": {
+    "sourceCodeUrl": "https://github.com/zachary-povey/zachpovey.dev"
+  },
+  "player": {
+    "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+    "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/naked_man.png",
+    "startingCell": {
+      "nx": 30,
+      "ny": 46
+    }
+  },
+  "npcs": [
+    {
+      "name": "me",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/me.png",
+      "startingCell": {
+        "nx": 30,
+        "ny": 36
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 1
+        },
+        {
+          "type": "step",
+          "direction": "Left"
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 5
+        },
+        {
+          "type": "step",
+          "direction": "Right"
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 5
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "me",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            {
+              "statement": "Hello again! What can I do for you?",
+              "autoContinue": true
+            }
+          ]
+        },
+        {
+          "type": "menu"
+        }
+      ]
+    },
+    {
+      "name": "bati",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/bati.png",
+      "startingCell": {
+        "nx": 13,
+        "ny": 27
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Left"
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 1
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 5
+        },
+        {
+          "type": "step",
+          "direction": "Right"
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 3
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "bati",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            {
+              "statement": "Y'allright? I'm Bati, Zach's best friend. We were lab partners together for three years at university where we both studied physics."
+            },
+            {
+              "statement": "We learnt to write some C as standard on our course, but Zach really seemed to enjoy it."
+            },
+            {
+              "statement": " So much so that he chose a computational master's project where he used C to simulate particle motions and python to visualise the results."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mick",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/mick.png",
+      "startingCell": {
+        "nx": 47,
+        "ny": 27
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Down"
+        },
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 10
+        },
+        {
+          "type": "step",
+          "direction": "Up"
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "mick",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            {
+              "statement": "Hi there, I'm Mick. I was Zach's boss at Gazprom Energy where he worked as a Lead Analyst in the demand forecasting team."
+            },
+            {
+              "statement": "The forecasting team end up doing a blend of some data analysis, data science and software development."
+            },
+            {
+              "statement": "Zach was mostly interested in the software engineering and became responsible for the UK gas forecast and other associated reporting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cecilia",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/cecilia.png",
+      "startingCell": {
+        "nx": 46,
+        "ny": 46
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Down"
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 10
+        },
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 1
+        },
+        {
+          "type": "step",
+          "direction": "Up"
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "cecilia",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            {
+              "statement": "Hello! I'm Cecilia, Zach's partner."
+            },
+            {
+              "statement": "When we're not working we like playing board games and socialising with friends..."
+            },
+            {
+              "statement": "...or I'm being roped in to help him at his allotment 🙄"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fliss",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/fliss.png",
+      "startingCell": {
+        "nx": 10,
+        "ny": 36
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Down"
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 10
+        },
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 10
+        },
+        {
+          "type": "step",
+          "direction": "Up"
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "fliss",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            {
+              "statement": "'Ey Up. I'm Fliss - Zach's big sister."
+            },
+            {
+              "statement": "We grew up on the coast in south west of England. That's probably where Zach's love of the water comes from."
+            },
+            {
+              "statement": "In 2017, Zach and my other brother kayaked the length of the River Shannon in Ireland, wild camping the whole way to Limerick."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "openingCutscene": [
+    {
+      "type": "character",
+      "name": "me",
+      "action": "walk",
+      "direction": "to-player"
+    },
+    {
+      "type": "dialog",
+      "text": [
+        {
+          "statement": "Hi I'm Zach, welcome! How can I help you today?",
+          "autoContinue": true
+        }
+      ]
+    },
+    {
+      "type": "menu"
+    },
+    {
+      "type": "dialog",
+      "text": [
+        {
+          "statement": "Of course, please make yourself at home!",
+          "autoContinue": true
+        },
+        {
+          "statement": "You can move around with the arrow keys and perform actions (like talking to people) by pressing 'x'."
+        },
+        {
+          "statement": "Just come back and find me if you need anything else, or simply press 's'."
+        },
+        {
+          "statement": "Enjoy!",
+          "autoContinue": true
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "name": "me",
+      "action": "walk",
+      "direction": "Right"
+    },
+    {
+      "type": "character",
+      "name": "me",
+      "action": "walk",
+      "direction": "Right"
+    }
+  ]
+}

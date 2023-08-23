@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!-- Something about matching the resolution of the screen: https://www.youtube.com/watch?v=hm7py_lZkL8 -->
+  <meta name="viewport" content="width=device-width" />
+  <title>Zach Povey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+  <link rel="icon" href="favicon-16x16.png?v=2" type="image/png" />
+</head>
+
+<body>
+  <div class="game-container" id="game-container">
+    <canvas class="game-canvas" id="game-canvas"></canvas>
+  </div>
+  <div class="overlay invisible" id="overlay">
+    <div class="arrow-keys">
+      <div>
+        <p>[↑]</p>
+      </div>
+      <div>
+        <p>[←][↓][→]</p>
+      </div>
+      <p>Move with arrow keys</p>
+    </div>
+    <div class="button-info">
+      <p>[x] - Action</p>
+      <p>[s] - Start Menu</p>
+    </div>
+  </div>
+  <script type="module" src="/cv_island/index.js"></script>
+</body>
+
+</html>
