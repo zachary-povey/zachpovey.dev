@@ -1,0 +1,12 @@
+{
+  "name": "zachary-povey-cv",
+  "version": "1.0.0",
+  "description": "Zachary Povey's CV",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {
+    "serve": "^10.0.1"
+  },
+  "author": "Zachary Povey"
+}

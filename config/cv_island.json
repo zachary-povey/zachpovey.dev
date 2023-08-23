@@ -1,0 +1,322 @@
+{
+  "map": "./artwork/data/maps/cv_island.json",
+  "menu": {
+    "sourceCodeUrl": "https://github.com/captain-porkins/cv"
+  },
+  "player": {
+    "dataFilepath": "./artwork/data/characters/modern_interiors.json",
+    "imageFilepath": "./artwork/images/characters/modern_interiors/naked_man.png",
+    "startingCell": {
+      "nx": 30,
+      "ny": 46
+    }
+  },
+  "npcs": [
+    {
+      "name": "me",
+      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./artwork/images/characters/modern_interiors/me.png",
+      "startingCell": {
+        "nx": 30,
+        "ny": 36
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 1
+        },
+        {
+          "type": "step",
+          "direction": "Left"
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 5
+        },
+        {
+          "type": "step",
+          "direction": "Right"
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 5
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "me",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            "Hi I'm Zach, welcome to my CV!\n You can move around using the arrow keys and press 'x' to perform actions like talking to someone, or closing dialog boxes like this one!",
+            "If you press 's' you will toggle the start menu, here you can link off to my source code and download a PDF version of my CV.",
+            "It's interesting you chose not wear any clothes... I can only presume that's to make me feel less nervous - how thoughtful!"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "aidan",
+      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./artwork/images/characters/modern_interiors/aidan.png",
+      "startingCell": {
+        "nx": 13,
+        "ny": 27
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Left"
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 1
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 5
+        },
+        {
+          "type": "step",
+          "direction": "Right"
+        },
+        {
+          "type": "idle",
+          "direction": "Right",
+          "time": 3
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "aidan",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            "Y'allright? I'm Aidan, Zach's best friend. We were lab parters together for 3 years at university where we both studied physics.",
+            "Some amount of coding was taught as standard on our course, but as Zach's masters project involved simulating particle motions, he ended up learning quite a lot extra."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mark",
+      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./artwork/images/characters/modern_interiors/mark.png",
+      "startingCell": {
+        "nx": 47,
+        "ny": 27
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Down"
+        },
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 10
+        },
+        {
+          "type": "step",
+          "direction": "Up"
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "mark",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            "Hi there, my name's Mark. I was Zach's boss at Gazprom Energy where he worked as a Lead Analyst in the demand forecasting team.",
+            "The forecasting team end up doing a blend of some data analysis, data science and software development.",
+            "Zach was responsible for the UK gas forecast and other associated reporting, and ended up mainly doing software development which was the area he was most interested in."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "alicia",
+      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./artwork/images/characters/modern_interiors/alicia.png",
+      "startingCell": {
+        "nx": 46,
+        "ny": 46
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Down"
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 10
+        },
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 1
+        },
+        {
+          "type": "step",
+          "direction": "Up"
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "alicia",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            "Hello! I'm Alicia, Zach's partner.",
+            "When we're not working we like playing board games and socialising with friends...",
+            "...or I'm being roped in to help him at his allotment 🙄"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jess",
+      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./artwork/images/characters/modern_interiors/jess.png",
+      "startingCell": {
+        "nx": 10,
+        "ny": 36
+      },
+      "behaviourLoop": [
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "step",
+          "direction": "Down"
+        },
+        {
+          "type": "idle",
+          "direction": "Down",
+          "time": 2
+        },
+        {
+          "type": "idle",
+          "direction": "Left",
+          "time": 10
+        },
+        {
+          "type": "idle",
+          "direction": "Up",
+          "time": 10
+        },
+        {
+          "type": "step",
+          "direction": "Up"
+        }
+      ],
+      "cutscene": [
+        {
+          "type": "character",
+          "name": "jess",
+          "action": "turn",
+          "direction": "to-player"
+        },
+        {
+          "type": "dialog",
+          "text": [
+            "'Ey Up. I'm Jess - Zach's big sister.",
+            "We grew up on the coast in the Westcountry. That's probably where Zach's love of the water comes from, he and my other brother like to go kayaking when they can. In 2017 they kayaked the length of the river shannon in Ireland, wild camping all the way down."
+          ]
+        }
+      ]
+    }
+  ],
+  "openingCutscene": [
+    {
+      "type": "character",
+      "name": "me",
+      "action": "walk",
+      "direction": "to-player"
+    },
+    {
+      "type": "dialog",
+      "text": [
+        "Hi I'm Zach, welcome to my CV!\n You can move around using the arrow keys and press 'x' to perform actions like talking to someone, or closing dialog boxes like this one!",
+        "If you press 's' you will toggle the start menu, here you can link off to my source code and download a PDF version of my CV.",
+        "It's interesting you chose not wear any clothes... I can only presume that's to make me feel less nervous - how thoughtful!"
+      ]
+    },
+    {
+      "type": "character",
+      "name": "me",
+      "action": "walk",
+      "direction": "Right"
+    },
+    {
+      "type": "character",
+      "name": "me",
+      "action": "walk",
+      "direction": "Right"
+    }
+  ]
+}
