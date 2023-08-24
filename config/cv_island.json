@@ -1,7 +1,7 @@
 {
   "map": "./artwork/data/maps/cv_island.json",
   "menu": {
-    "sourceCodeUrl": "https://github.com/captain-porkins/cv"
+    "sourceCodeUrl": "https://github.com/zachary-povey/zachpovey.dev"
   },
   "player": {
     "dataFilepath": "./artwork/data/characters/modern_interiors.json",
