@@ -57,23 +57,28 @@ image {
   position: absolute;
   margin: 0;
   left: 8%;
-  top: 12%;
+  top: 15%;
   text-align: left;
   width: 80%;
 }
 
 .dialog-box-button {
+  --image: url("artwork/images/ui/tick.png");
   margin: 0;
   padding: 0;
   background: none;
   border: 0;
   font-family: inherit;
   font-size: var(--font-size);
+  width: var(--font-size);
+  height: var(--font-size);
   cursor: pointer;
-
+  background-image: var(--image);
+  background-position: center;
+  background-size: 100% 100%;
   position: absolute;
   right: 8%;
-  bottom: 12%;
+  bottom: 20%;
 }
 
 .menu {

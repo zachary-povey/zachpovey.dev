@@ -90,7 +90,6 @@ class Statement {
 
     this.button = document.createElement("button")
     this.button.classList.add("dialog-box-button")
-    this.button.innerHTML = "Ok!"
     parentElement.appendChild(this.button)
 
     this.button.addEventListener("click", () => {
@@ -153,10 +152,14 @@ class Statement {
   }
 
   deactivate() {
-    this.terminationButton.removeCallback("skipToDialogEnd")
-    this.terminationButton.removeCallback("closeDialog")
-    this.paragraph.remove()
-    this.button.remove()
-    this.onCompletion()
+    this.button.style = '--image: url("artwork/images/ui/tick_pushed.png")'
+    setTimeout(() => {
+      this.terminationButton.removeCallback("skipToDialogEnd")
+      this.terminationButton.removeCallback("closeDialog")
+      this.paragraph.remove()
+      this.button.remove()
+      this.onCompletion()
+    }, 100)
+
   }
 }
