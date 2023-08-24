@@ -61,7 +61,6 @@ export class DialogBox {
     return box
   }
 }
-
 class Statement {
   constructor(text) {
     this.text = text

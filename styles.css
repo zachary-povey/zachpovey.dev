@@ -28,6 +28,7 @@ body {
   margin: 0 auto;
   outline: 1px solid #fff;
 }
+
 .game-canvas {
   image-rendering: pixelated;
 }
@@ -37,19 +38,28 @@ image {
 }
 
 .dialog-box {
+  --width: 500px;
+  --height: 500px;
+  width: 95%;
+  height: 30%;
   position: absolute;
-  left: 0;
+  left: 2.5%;
   right: 0;
   bottom: 0;
-  height: 30%;
   padding: 4px;
-  background: #f1f1f1;
-  border-top: 1px solid #a48465;
+  background-image: url("artwork/images/ui/dialog_box.png");
+  background-position: center;
+  background-size: 100% 100%;
   color: #000000;
 }
 
 .dialog-box-p {
+  position: absolute;
   margin: 0;
+  left: 8%;
+  top: 12%;
+  text-align: left;
+  width: 80%;
 }
 
 .dialog-box-button {
@@ -62,8 +72,8 @@ image {
   cursor: pointer;
 
   position: absolute;
-  right: 2px;
-  bottom: 0;
+  right: 8%;
+  bottom: 12%;
 }
 
 .menu {
