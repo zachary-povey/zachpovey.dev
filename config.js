@@ -54,13 +54,6 @@ export async function loadConfig(configFilepath) {
               window.open(config.menu.sourceCodeUrl, "_blank").focus()
             },
           },
-          {
-            name: "downloadPDF",
-            text: "Download PDF version",
-            callback: () => {
-              window.open("ZP_CV.pdf", "_blank").focus()
-            },
-          },
         ],
         exit: { enabled: true, text: "Return to CV" },
         cssClass: "menu",
