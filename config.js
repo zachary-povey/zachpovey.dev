@@ -45,6 +45,7 @@ export async function loadConfig(configFilepath) {
   const menuCutscene = new Cutscene([
     {
       type: "menu",
+      // test
       menu: new Menu({
         options: [
           {
