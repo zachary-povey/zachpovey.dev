@@ -51,6 +51,7 @@ image {
   background-position: center;
   background-size: 100% 100%;
   color: #000000;
+  image-rendering: pixelated;
 }
 
 .dialog-box-p {
@@ -60,6 +61,7 @@ image {
   top: 15%;
   text-align: left;
   width: 80%;
+  image-rendering: pixelated;
 }
 
 .dialog-box-button {
@@ -87,19 +89,17 @@ image {
   right: 5%;
   bottom: 5%;
   top: 5%;
-  /* height: 90%; */
+  background-image: url("artwork/images/ui/menu.png");
+  background-position: center;
+  background-size: 100% 100%;
   padding: 4px;
-  background: #000000b2;
-  color: #ffffff;
-  text-align: center;
-  /* align-items: center; */
-  border: #ffffff;
-  border-style: double;
-
+  text-align: left;
+  image-rendering: pixelated;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  white-space: nowrap
 }
 
 .menu-button {
@@ -109,14 +109,28 @@ image {
   border: 0;
   font-family: inherit;
   font-size: var(--font-size);
+  height: var(--font-size);
   cursor: pointer;
-  display: flex;
   align-items: center;
-
-  color: #ffffff;
-  /* width: 100%; */
+  text-align: justify;
+  background-image: url("artwork/images/ui/menu_option.png");
+  background-position: center;
+  background-size: 115% 180%;
   margin: 0 auto;
+  padding-left: 5%;
 }
+
+.menu-button:focus {
+  background-image: url("artwork/images/ui/menu_option_selected.png");
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.menu-button:hover {
+  border: none;
+}
+
 
 .overlay {
   position: absolute;

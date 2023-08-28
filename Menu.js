@@ -60,9 +60,8 @@ export class Menu {
     })
 
     const maxButtonWidth = Math.max(...this.buttons.map((b) => b.offsetWidth))
-    console.log("!!!", maxButtonWidth)
 
-    this.buttons.forEach((b) => (b.style.width = `${maxButtonWidth}px`))
+    this.buttons.forEach((b) => (b.style.width = `${maxButtonWidth * 1.1}px`))
 
     this.upHandler = new KeyHandler({
       boundKey: "ArrowUp",
