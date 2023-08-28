@@ -8,6 +8,27 @@ export async function loadConfig(configFilepath) {
   const config = await fetch(configFilepath).then((value) => value.json())
   const map = await Map.loadFromFile(config.map)
 
+  const menu = new Menu({
+    options: [
+      {
+        name: "gotToSourceCode",
+        text: "View source code",
+        callback: () => {
+          window.open(config.menu.sourceCodeUrl, "_blank").focus()
+        },
+      },
+    ],
+    exit: { enabled: true, text: "Explore!" },
+    cssClass: "menu",
+  })
+
+  const appendMenu = (step) => {
+    if (step.type == "menu") {
+      step.menu = menu
+    }
+    return step
+  }
+
   const player = await Player.loadFromFile({
     dataFilepath: config.player.dataFilepath,
     imageFilepath: config.player.imageFilepath,
@@ -23,7 +44,7 @@ export async function loadConfig(configFilepath) {
         position: map.positionForCell(npc.startingCell),
         stepSize: map.squareSize,
         behaviourLoop: npc.behaviourLoop,
-        cutscene: new Cutscene(npc.cutscene),
+        cutscene: new Cutscene(npc.cutscene.map(appendMenu)),
         name: npc.name,
       })
     )
@@ -40,24 +61,13 @@ export async function loadConfig(configFilepath) {
   )
   map.mount(characters)
 
-  const openingCutscene = new Cutscene(config.openingCutscene)
+
+  const openingCutscene = new Cutscene(config.openingCutscene.map(appendMenu))
 
   const menuCutscene = new Cutscene([
     {
       type: "menu",
-      menu: new Menu({
-        options: [
-          {
-            name: "gotToSourceCode",
-            text: "View source code",
-            callback: () => {
-              window.open(config.menu.sourceCodeUrl, "_blank").focus()
-            },
-          },
-        ],
-        exit: { enabled: true, text: "Return to CV" },
-        cssClass: "menu",
-      }),
+      menu,
     },
   ])
 

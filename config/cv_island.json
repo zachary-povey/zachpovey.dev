@@ -65,10 +65,14 @@
         {
           "type": "dialog",
           "text": [
-            "Hi I'm Zach, welcome to my CV!\n You can move around using the arrow keys and press 'x' to perform actions like talking to someone, or closing dialog boxes like this one!",
-            "If you press 's' you will toggle the start menu, here you can link off to my source code and download a PDF version of my CV.",
-            "It's interesting you chose not wear any clothes... I can only presume that's to make me feel less nervous - how thoughtful!"
+            {
+              "statement": "Hello again! What can I do for you?",
+              "autoContinue": true
+            }
           ]
+        },
+        {
+          "type": "menu"
         }
       ]
     },
@@ -125,8 +129,12 @@
         {
           "type": "dialog",
           "text": [
-            "Y'allright? I'm Aidan, Zach's best friend. We were lab parters together for 3 years at university where we both studied physics.",
-            "Some amount of coding was taught as standard on our course, but as Zach's masters project involved simulating particle motions, he ended up learning quite a lot extra."
+            {
+              "statement": "Y'allright? I'm Aidan, Zach's best friend. We were lab parters together for 3 years at university where we both studied physics."
+            },
+            {
+              "statement": "Some amount of coding was taught as standard on our course, but as Zach's masters project involved simulating particle motions, he ended up learning quite a lot extra."
+            }
           ]
         }
       ]
@@ -169,9 +177,15 @@
         {
           "type": "dialog",
           "text": [
-            "Hi there, my name's Mark. I was Zach's boss at Gazprom Energy where he worked as a Lead Analyst in the demand forecasting team.",
-            "The forecasting team end up doing a blend of some data analysis, data science and software development.",
-            "Zach was responsible for the UK gas forecast and other associated reporting, and ended up mainly doing software development which was the area he was most interested in."
+            {
+              "statement": "Hi there, my name's Mark. I was Zach's boss at Gazprom Energy where he worked as a Lead Analyst in the demand forecasting team."
+            },
+            {
+              "statement": "The forecasting team end up doing a blend of some data analysis, data science and software development."
+            },
+            {
+              "statement": "Zach was responsible for the UK gas forecast and other associated reporting, and ended up mainly doing software development which was the area he was most interested in."
+            }
           ]
         }
       ]
@@ -224,9 +238,15 @@
         {
           "type": "dialog",
           "text": [
-            "Hello! I'm Alicia, Zach's partner.",
-            "When we're not working we like playing board games and socialising with friends...",
-            "...or I'm being roped in to help him at his allotment 🙄"
+            {
+              "statement": "Hello! I'm Alicia, Zach's partner."
+            },
+            {
+              "statement": "When we're not working we like playing board games and socialising with friends..."
+            },
+            {
+              "statement": "...or I'm being roped in to help him at his allotment 🙄"
+            }
           ]
         }
       ]
@@ -284,8 +304,15 @@
         {
           "type": "dialog",
           "text": [
-            "'Ey Up. I'm Jess - Zach's big sister.",
-            "We grew up on the coast in the Westcountry. That's probably where Zach's love of the water comes from, he and my other brother like to go kayaking when they can. In 2017 they kayaked the length of the river shannon in Ireland, wild camping all the way down."
+            {
+              "statement": "'Ey Up. I'm Jess - Zach's big sister."
+            },
+            {
+              "statement": "We grew up on the coast in the Westcountry. That's probably where Zach's love of the water comes from, he and my other brother like to go kayaking when they can."
+            },
+            {
+              "statement": "In 2017 they kayaked the length of the river shannon in Ireland, wild camping all the way down."
+            }
           ]
         }
       ]
@@ -301,9 +328,32 @@
     {
       "type": "dialog",
       "text": [
-        "Hi I'm Zach, welcome to my CV!\n You can move around using the arrow keys and press 'x' to perform actions like talking to someone, or closing dialog boxes like this one!",
-        "If you press 's' you will toggle the start menu, here you can link off to my source code and download a PDF version of my CV.",
-        "It's interesting you chose not wear any clothes... I can only presume that's to make me feel less nervous - how thoughtful!"
+        {
+          "statement": "Hi I'm Zach, welcome! How can I help you today?",
+          "autoContinue": true
+        }
+      ]
+    },
+    {
+      "type": "menu"
+    },
+    {
+      "type": "dialog",
+      "text": [
+        {
+          "statement": "Of course, please make yourself at home!",
+          "autoContinue": true
+        },
+        {
+          "statement": "You can move around with the arrow keys and perform actions (like talking to people) by pressing 'x'."
+        },
+        {
+          "statement": "Just come back and find me if you need anything else, or simply press 's'."
+        },
+        {
+          "statement": "Enjoy!",
+          "autoContinue": true
+        }
       ]
     },
     {

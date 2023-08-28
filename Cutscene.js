@@ -58,6 +58,7 @@ export class Cutscene {
       this.currentStageIndex = 0
       this.currentCharacter = null
       this.currentDialogBox = null
+      window.dispatchEvent(new CustomEvent("unhideOverlay"))
       return true
     }
 

@@ -1,13 +1,13 @@
 export class DialogBox {
   constructor(textStatements) {
     textStatements =
-      typeof textStatements === "string" ? [textStatements] : textStatements
+      typeof textStatements === "string" ? [{ statement: textStatements }] : textStatements
     if (!(textStatements.length > 0)) {
       throw new Error("Dialog box needs at least one text statement!")
     }
 
     this.statements = textStatements.map((text) => {
-      return new Statement(text)
+      return new Statement(text.statement, text.autoContinue ?? false)
     })
     this.statementIndex = null
     this.container = null
@@ -50,7 +50,6 @@ export class DialogBox {
   }
 
   deactivate() {
-    window.dispatchEvent(new CustomEvent("unhideOverlay"))
     this.container.remove()
     this.isActive = false
   }
@@ -62,8 +61,9 @@ export class DialogBox {
   }
 }
 class Statement {
-  constructor(text) {
-    this.text = text
+  constructor(statement, autoContinue) {
+    this.text = statement
+    this.autoContinue = autoContinue
 
     this.charactersRevealed = 0
 
@@ -88,13 +88,15 @@ class Statement {
     this.paragraph.classList.add("dialog-box-p")
     parentElement.appendChild(this.paragraph)
 
-    this.button = document.createElement("button")
-    this.button.classList.add("dialog-box-button")
-    parentElement.appendChild(this.button)
+    if (!this.autoContinue) {
+      this.button = document.createElement("button")
+      this.button.classList.add("dialog-box-button")
+      parentElement.appendChild(this.button)
 
-    this.button.addEventListener("click", () => {
-      this.deactivate()
-    })
+      this.button.addEventListener("click", () => {
+        this.deactivate()
+      })
+    }
 
     terminationButton.addCallback({
       name: "skipToDialogEnd",
@@ -134,7 +136,10 @@ class Statement {
         this.startRevealing.bind(this),
         this.revealDelayMs
       )
-    } else {
+    } else if (this.autoContinue) {
+      this.deactivate()
+    }
+    else {
       this.terminationButton.removeCallback("skipToDialogEnd")
       this.terminationButton.addCallback({
         name: "closeDialog",
@@ -152,14 +157,18 @@ class Statement {
   }
 
   deactivate() {
-    this.button.style = '--image: url("artwork/images/ui/tick_pushed.png")'
+    if (this.button) {
+      this.button.style = '--image: url("artwork/images/ui/tick_pushed.png")'
+    }
     setTimeout(() => {
       this.terminationButton.removeCallback("skipToDialogEnd")
       this.terminationButton.removeCallback("closeDialog")
       this.paragraph.remove()
-      this.button.remove()
+      if (this.button) {
+        this.button.remove()
+      }
       this.onCompletion()
-    }, 100)
+    }, this.autoContinue ? 500 : 100)
 
   }
 }
