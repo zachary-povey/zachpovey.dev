@@ -154,6 +154,9 @@ class Statement {
   revealAll() {
     clearTimeout(this.revealTimeout)
     this.paragraph.innerHTML = this.text
+    if (this.autoContinue) {
+      this.deactivate()
+    }
   }
 
   deactivate() {
