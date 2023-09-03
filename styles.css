@@ -115,7 +115,7 @@ image {
   text-align: justify;
   background-image: url("artwork/images/ui/menu_option.png");
   background-position: center;
-  background-size: 115% 180%;
+  background-size: 100% 100%;
   margin: 0 auto;
   padding-left: 5%;
 }
@@ -179,18 +179,6 @@ image {
   visibility: hidden;
 }
 
-.home-page-container {
-  display: grid;
-  grid-template-areas:
-    "title title"
-    "blurb menu";
-  grid-template-columns: max-content 1fr;
-  grid-template-rows: min-content 1fr;
-  column-gap: 10px;
-  height: 100%;
-  margin: 0;
-}
-
 .blurb {
   white-space: nowrap;
   margin-right: 5%;
@@ -200,8 +188,86 @@ image {
   width: 100%;
 }
 
-.main-menu-container {
-  width: 100%;
-  border-left: 5px solid white;
-  grid-area: menu;
+.contact-form {
+  font-family: inherit;
+  font-size: var(--font-size);
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "message message"
+    "reply_to send";
+  grid-template-rows: min-content 1fr minmax(50px, 100px);
+  grid-template-columns: 1fr minmax(100px, 200px);
+  row-gap: 1%;
+  column-gap: 5px;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  top: 5%;
+  background-image: url("artwork/images/ui/menu.png");
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 5%;
+  text-align: left;
+  image-rendering: pixelated;
+}
+
+.contact-form-title {
+  font-size: var(--font-size);
+  font-family: inherit;
+  grid-area: title;
+  height: min-content;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-form-message {
+  font-family: "VT323", monospace;
+  text-align: left;
+  font-size: calc(var(--font-size) / 2);
+  padding: 3%;
+  grid-area: message;
+  background-image: url("artwork/images/ui/email_input.png");
+  background-position: center;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  background-color: transparent;
+  border: none;
+  resize: none;
+}
+
+.contact-form-message:focus {
+  outline: none;
+}
+
+.contact-form-reply-to {
+  font-family: "VT323", monospace;
+  text-align: center;
+  font-size: var(--font-size);
+  grid-area: reply_to;
+  background-image: url("artwork/images/ui/menu_option.png");
+  background-position: center;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  background-color: transparent;
+  border: none;
+}
+
+.contact-form-reply-to:focus {
+  outline: none;
+}
+
+.contact-form-send {
+  --image: url("artwork/images/ui/send_button.png");
+  grid-area: send;
+  background-image: var(--image);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  align-self: center;
 }

@@ -3,6 +3,7 @@ import { NonPlayer } from "./nonplayer.js"
 import { Player } from "./player.js"
 import { Cutscene } from "./Cutscene.js"
 import { Menu } from "./Menu.js"
+import { createContactForm } from "./contactform.js"
 
 export async function loadConfig(configFilepath) {
   const config = await fetch(configFilepath).then((value) => value.json())
@@ -17,6 +18,11 @@ export async function loadConfig(configFilepath) {
           window.open(config.menu.sourceCodeUrl, "_blank").focus()
         },
       },
+      {
+        name: "contact",
+        text: "Contact Zach",
+        callback: createContactForm
+      }
     ],
     exit: { enabled: true, text: "Explore!" },
     cssClass: "menu",

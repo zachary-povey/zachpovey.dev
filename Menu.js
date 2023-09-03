@@ -34,11 +34,15 @@ export class Menu {
     return menu
   }
 
-  activate({ parentElement, actionButton, closeButton }) {
+  activate(options) {
+    this.parentElement = options?.parentElement ?? this.parentElement
+    this.actionButton = options?.actionButton ?? this.actionButton
+    this.closeButton = options?.closeButton ?? this.closeButton
+
     window.dispatchEvent(new CustomEvent("hideOverlay"))
 
-    if (closeButton) {
-      closeButton.addCallback({
+    if (this.closeButton) {
+      this.closeButton.addCallback({
         name: "exitMenu",
         callback: () => {
           this.deactivate()
@@ -46,14 +50,12 @@ export class Menu {
       })
     }
 
-    this.actionButton = actionButton
-
     this.container = document.createElement("div")
     if (this.cssClass) {
       this.container.classList.add(this.cssClass)
     }
 
-    parentElement.appendChild(this.container)
+    this.parentElement.appendChild(this.container)
 
     this.buttons = this.options.map((option, index) => {
       return this.makeOptionButton({ option, index })
@@ -100,6 +102,13 @@ export class Menu {
     this.isActive = false
   }
 
+  hide() {
+    this.removeActionButtonCallbacks()
+    this.upHandler.unbind()
+    this.downHandler.unbind()
+    this.container.remove()
+  }
+
   makeOptionButton({ option, index }) {
     const button = document.createElement("button")
     button.classList.add("menu-button")
@@ -107,7 +116,7 @@ export class Menu {
     button.innerHTML = option.text
     this.container.appendChild(button)
 
-    button.addEventListener("click", option.callback)
+    button.addEventListener("click", () => option.callback(this))
 
     button.addEventListener("mouseenter", () => {
       this.selectedOptionIndex = index
