@@ -24,46 +24,54 @@ export function createContactForm(menu) {
 
     const children = [title, message, replyTo, button]
 
-    button.addEventListener("click", () => {
-        button.style = '--image: url("artwork/images/ui/send_button_half_pressed.png")'
-        setTimeout(() => {
-            button.style = '--image: url("artwork/images/ui/send_button_pressed.png")'
-            setTimeout(() => {
-                button.style = '--image: url("artwork/images/ui/send_button_half_pressed.png")'
-                setTimeout(() => {
-                    button.style = '--image: url("artwork/images/ui/send_button.png")'
-                    setTimeout(() => {
-                        for (const child of children) {
-                            child.remove()
-                        }
-                        const title = document.createElement("h1")
-                        title.classList.add("contact-form-title")
-                        title.innerHTML = "Message received!\n The uh... 'real' me will be in touch soon."
-                        container.appendChild(title)
-                        setTimeout(() => {
-                            container.remove()
-                            menu.activate()
-                        }, 3000)
-                    }, 100)
-                }, 100)
-            }, 100)
-        }, 100)
-
-
-    })
-
-
-
     for (const child of children) {
         container.appendChild(child)
     }
 
+    button.addEventListener("click", () => {
+        transition(
+            {
+                element: button,
+                styles: [
+                    '--image: url("artwork/images/ui/send_button_half_pressed.png")',
+                    '--image: url("artwork/images/ui/send_button_pressed.png")',
+                    '--image: url("artwork/images/ui/send_button_half_pressed.png")',
+                    '--image: url("artwork/images/ui/send_button.png")',
+                ],
+                wait_ms: 100,
+                then: () => {
+                    for (const child of children) {
+                        child.remove()
+                    }
+                    const title = document.createElement("h1")
+                    title.classList.add("contact-form-title")
+                    title.innerHTML = "Message received!\n The uh... 'real' me will be in touch soon."
+                    container.appendChild(title)
+                    setTimeout(() => {
+                        container.remove()
+                        menu.activate()
+                    }, 3000)
+                }
+            }
+        )
+    })
+}
 
-
-    //  deactivate menu
-    // create input text box
-    // create button
-    // on button click: 
-    // - send email
-    // - activate menu
+function transition({ element, styles, wait_ms, then }) {
+    if (styles.length == 0) {
+        then()
+        return
+    }
+    setTimeout(
+        () => {
+            element.style = styles[0]
+            transition({
+                element,
+                styles: styles.slice(1),
+                wait_ms,
+                then,
+            })
+        },
+        wait_ms
+    )
 }

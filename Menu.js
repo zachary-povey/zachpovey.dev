@@ -155,7 +155,7 @@ export class Menu {
     this.removeActionButtonCallbacks()
     this.actionButton.addCallback({
       name: this.options[this.selectedOptionIndex].name,
-      callback: this.options[this.selectedOptionIndex].callback,
+      callback: () => this.options[this.selectedOptionIndex].callback(this),
     })
   }
 
