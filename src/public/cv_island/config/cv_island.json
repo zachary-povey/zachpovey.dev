@@ -1,11 +1,11 @@
 {
-  "map": "./artwork/data/maps/cv_island.json",
+  "map": "./cv_island/artwork/data/maps/cv_island.json",
   "menu": {
     "sourceCodeUrl": "https://github.com/zachary-povey/zachpovey.dev"
   },
   "player": {
-    "dataFilepath": "./artwork/data/characters/modern_interiors.json",
-    "imageFilepath": "./artwork/images/characters/modern_interiors/naked_man.png",
+    "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+    "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/naked_man.png",
     "startingCell": {
       "nx": 30,
       "ny": 46
@@ -14,8 +14,8 @@
   "npcs": [
     {
       "name": "me",
-      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./artwork/images/characters/modern_interiors/me.png",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/me.png",
       "startingCell": {
         "nx": 30,
         "ny": 36
@@ -78,8 +78,8 @@
     },
     {
       "name": "aidan",
-      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./artwork/images/characters/modern_interiors/aidan.png",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/aidan.png",
       "startingCell": {
         "nx": 13,
         "ny": 27
@@ -141,8 +141,8 @@
     },
     {
       "name": "mark",
-      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./artwork/images/characters/modern_interiors/mark.png",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/mark.png",
       "startingCell": {
         "nx": 47,
         "ny": 27
@@ -192,8 +192,8 @@
     },
     {
       "name": "alicia",
-      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./artwork/images/characters/modern_interiors/alicia.png",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/alicia.png",
       "startingCell": {
         "nx": 46,
         "ny": 46
@@ -253,8 +253,8 @@
     },
     {
       "name": "jess",
-      "dataFilepath": "./artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./artwork/images/characters/modern_interiors/jess.png",
+      "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/jess.png",
       "startingCell": {
         "nx": 10,
         "ny": 36

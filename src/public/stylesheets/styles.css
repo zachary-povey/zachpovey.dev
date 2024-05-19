@@ -47,7 +47,7 @@ image {
   right: 0;
   bottom: 0;
   padding: 4px;
-  background-image: url("artwork/images/ui/dialog_box.png");
+  background-image: url("../cv_island/artwork/images/ui/dialog_box.png");
   background-position: center;
   background-size: 100% 100%;
   color: #000000;
@@ -65,7 +65,7 @@ image {
 }
 
 .dialog-box-button {
-  --image: url("artwork/images/ui/tick.png");
+  --image: url("../cv_island/artwork/images/ui/tick.png");
   margin: 0;
   padding: 0;
   background: none;
@@ -89,7 +89,7 @@ image {
   right: 5%;
   bottom: 5%;
   top: 5%;
-  background-image: url("artwork/images/ui/menu.png");
+  background-image: url("../cv_island/artwork/images/ui/menu.png");
   background-position: center;
   background-size: 100% 100%;
   padding: 4px;
@@ -113,7 +113,7 @@ image {
   cursor: pointer;
   align-items: center;
   text-align: justify;
-  background-image: url("artwork/images/ui/menu_option.png");
+  background-image: url("../cv_island/artwork/images/ui/menu_option.png");
   background-position: center;
   background-size: 100% 100%;
   margin: 0 auto;
@@ -121,7 +121,7 @@ image {
 }
 
 .menu-button:focus {
-  background-image: url("artwork/images/ui/menu_option_selected.png");
+  background-image: url("../cv_island/artwork/images/ui/menu_option_selected.png");
   border: none;
   box-shadow: none;
   outline: none;
@@ -205,7 +205,7 @@ image {
   right: 5%;
   bottom: 5%;
   top: 5%;
-  background-image: url("artwork/images/ui/menu.png");
+  background-image: url("../cv_island/artwork/images/ui/menu.png");
   background-position: center;
   background-size: 100% 100%;
   padding: 5%;
@@ -228,7 +228,7 @@ image {
   font-size: calc(var(--font-size) / 2);
   padding: 3%;
   grid-area: message;
-  background-image: url("artwork/images/ui/email_input.png");
+  background-image: url("../cv_island/artwork/images/ui/email_input.png");
   background-position: center;
   background-size: 100% 100%;
   image-rendering: pixelated;
@@ -246,7 +246,7 @@ image {
   text-align: center;
   font-size: var(--font-size);
   grid-area: reply_to;
-  background-image: url("artwork/images/ui/menu_option.png");
+  background-image: url("../cv_island/artwork/images/ui/menu_option.png");
   background-position: center;
   background-size: 100% 100%;
   image-rendering: pixelated;
@@ -259,7 +259,7 @@ image {
 }
 
 .contact-form-send {
-  --image: url("artwork/images/ui/send_button.png");
+  --image: url("../cv_island/artwork/images/ui/send_button.png");
   grid-area: send;
   background-image: var(--image);
   background-position: center;

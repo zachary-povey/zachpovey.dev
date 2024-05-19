@@ -1,6 +1,6 @@
 {
   "background": {
-    "path": "./artwork/images/maps/cv_island/all.png",
+    "path": "./cv_island/artwork/images/maps/cv_island/all.png",
     "scale": 2
   },
   "nSquares": {
@@ -13,7 +13,7 @@
       "nxMax": 53,
       "nyMin": 9,
       "nyMax": 26,
-      "path": "./artwork/images/maps/cv_island/object_buildings.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_buildings.png",
       "scale": 2
     },
     {
@@ -21,7 +21,7 @@
       "nxMax": 55,
       "nyMin": 28,
       "nyMax": 30,
-      "path": "./artwork/images/maps/cv_island/object_upper_lamposts.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_upper_lamposts.png",
       "scale": 2
     },
     {
@@ -29,7 +29,7 @@
       "nxMax": 55,
       "nyMin": 33,
       "nyMax": 34,
-      "path": "./artwork/images/maps/cv_island/object_car.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_car.png",
       "scale": 2
     },
     {
@@ -37,7 +37,7 @@
       "nxMax": 55,
       "nyMin": 32,
       "nyMax": 35,
-      "path": "./artwork/images/maps/cv_island/object_lower_traffic_lights.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_lower_traffic_lights.png",
       "scale": 2
     },
     {
@@ -45,7 +45,7 @@
       "nxMax": 21,
       "nyMin": 40,
       "nyMax": 44,
-      "path": "./artwork/images/maps/cv_island/object_boat_yellow.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_boat_yellow.png",
       "scale": 2
     },
     {
@@ -53,7 +53,7 @@
       "nxMax": 21,
       "nyMin": 41,
       "nyMax": 42,
-      "path": "./artwork/images/maps/cv_island/object_boat_green.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_boat_green.png",
       "scale": 2
     },
     {
@@ -61,7 +61,7 @@
       "nxMax": 20,
       "nyMin": 47,
       "nyMax": 48,
-      "path": "./artwork/images/maps/cv_island/object_boat_red.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_boat_red.png",
       "scale": 2
     },
     {
@@ -69,7 +69,7 @@
       "nxMax": 11,
       "nyMin": 54,
       "nyMax": 54,
-      "path": "./artwork/images/maps/cv_island/object_benches.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_benches.png",
       "scale": 2
     },
     {
@@ -77,7 +77,7 @@
       "nxMax": 55,
       "nyMin": 40,
       "nyMax": 44,
-      "path": "./artwork/images/maps/cv_island/object_house.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_house.png",
       "scale": 2
     },
     {
@@ -85,7 +85,7 @@
       "nxMax": 44,
       "nyMin": 48,
       "nyMax": 50,
-      "path": "./artwork/images/maps/cv_island/object_apple_trees_upper.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_apple_trees_upper.png",
       "scale": 2
     },
     {
@@ -93,7 +93,7 @@
       "nxMax": 44,
       "nyMin": 50,
       "nyMax": 52,
-      "path": "./artwork/images/maps/cv_island/object_apple_trees_lower.png",
+      "path": "./cv_island/artwork/images/maps/cv_island/object_apple_trees_lower.png",
       "scale": 2
     }
   ],

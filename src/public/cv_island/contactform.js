@@ -33,10 +33,10 @@ export function createContactForm(menu) {
             {
                 element: button,
                 styles: [
-                    '--image: url("artwork/images/ui/send_button_half_pressed.png")',
-                    '--image: url("artwork/images/ui/send_button_pressed.png")',
-                    '--image: url("artwork/images/ui/send_button_half_pressed.png")',
-                    '--image: url("artwork/images/ui/send_button.png")',
+                    '--image: url("../cv_island/artwork/images/ui/send_button_half_pressed.png")',
+                    '--image: url("../cv_island/artwork/images/ui/send_button_pressed.png")',
+                    '--image: url("../cv_island/artwork/images/ui/send_button_half_pressed.png")',
+                    '--image: url("../cv_island/artwork/images/ui/send_button.png")',
                 ],
                 wait_ms: 100,
                 then: () => {

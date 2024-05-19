@@ -6,7 +6,7 @@ import { SpeedFactorCalculator } from "./util.js"
 
 export async function startGameLoop({ context, gameContainer }) {
   const { map, characterControllers, openingCutscene, menuCutscene } =
-    await loadConfig("./config/cv_island.json")
+    await loadConfig("./cv_island/config/cv_island.json")
 
   const custsceneManager = new CutsceneManager(characterControllers)
 
