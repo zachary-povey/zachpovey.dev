@@ -42,6 +42,7 @@ export class Menu {
     window.dispatchEvent(new CustomEvent("hideOverlay"))
 
     if (this.closeButton) {
+      this.closeButton.bind()
       this.closeButton.addCallback({
         name: "exitMenu",
         callback: () => {
@@ -103,6 +104,7 @@ export class Menu {
   }
 
   hide() {
+    this.closeButton.unbind()
     this.removeActionButtonCallbacks()
     this.upHandler.unbind()
     this.downHandler.unbind()

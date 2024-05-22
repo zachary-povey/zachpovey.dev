@@ -29,6 +29,14 @@ export function createContactForm(menu) {
     }
 
     button.addEventListener("click", () => {
+        fetch("/api/contact", {
+            method: "POST",
+            body: JSON.stringify({ message: message.value, from: replyTo.value }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        replyTo.value
         transition(
             {
                 element: button,

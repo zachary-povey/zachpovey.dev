@@ -22,7 +22,7 @@ export class ApiController {
     return new ApiController(emailService)
   }
 
-  public async sendContact(req: Request, res: Response) {
+  public async sendContact(req: Request, res: Response): Promise<undefined> {
     if (!this.isValidContactPostRequest(req.body)) {
       res
         .status(400)
@@ -33,7 +33,6 @@ export class ApiController {
         .send()
       return
     }
-    console.log(req.body)
     await this.emailService.sendContact(req.body)
     res.sendStatus(200)
   }

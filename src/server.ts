@@ -43,29 +43,6 @@ if (EnvVars.NodeEnv === NodeEnvs.Production.valueOf()) {
   app.use(helmet())
 }
 
-// Add error handler
-app.use(
-  (
-    err: Error,
-    _: Request,
-    res: Response,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    next: NextFunction,
-  ) => {
-    console.log("!!!")
-    if (EnvVars.NodeEnv !== NodeEnvs.Test.valueOf()) {
-      logger.err(err, true)
-    }
-    let status = HttpStatusCodes.BAD_REQUEST
-    if (err instanceof RouteError) {
-      console.log(err)
-      console.log("!!!")
-      status = err.status
-    }
-    return res.status(status).json({ error: err.message })
-  },
-)
-
 // ** Front-End Content ** //
 
 // Set views directory (html)
@@ -82,8 +59,40 @@ app.get("/", (_: Request, res: Response) => {
 })
 
 // Redirect to login if not logged in.
-app.post("/api/contact", apiController.sendContact.bind(apiController))
+app.post(
+  "/api/contact",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      await apiController.sendContact(req, res)
+    } catch (e) {
+      console.log("!!in catch!")
+      console.log(e)
+      next(e)
+    }
+  },
+)
 
+// --
+// Add error handler
+app.use(
+  (
+    err: Error,
+    _: Request,
+    res: Response,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    next: NextFunction,
+  ) => {
+    console.log("error handler!")
+    if (EnvVars.NodeEnv !== NodeEnvs.Test.valueOf()) {
+      logger.err(err, true)
+    }
+    let status = HttpStatusCodes.BAD_REQUEST
+    if (err instanceof RouteError) {
+      status = err.status
+    }
+    return res.status(status).json({ error: err.message })
+  },
+)
 // **** Export default **** //
 
 export default app

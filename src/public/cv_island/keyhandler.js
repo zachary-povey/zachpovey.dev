@@ -4,6 +4,7 @@ export class KeyHandler {
     this.callbacks = callbacks || {}
     this.singleUseCallbackNames = []
     this.isPressed = false
+    this.isBound = false
 
     this.keyPressedHandler = this._keyPressedHandler.bind(this)
     this.keyReleasedHandler = this._keyReleasedHandler.bind(this)
@@ -51,14 +52,20 @@ export class KeyHandler {
   }
 
   bind() {
-    document.addEventListener("keydown", this.keyPressedHandler)
-    document.addEventListener("keyup", this.keyReleasedHandler)
-    document.addEventListener("visibilitychange", this.pageChangeHandler)
+    if (!this.isBound) {
+      document.addEventListener("keydown", this.keyPressedHandler)
+      document.addEventListener("keyup", this.keyReleasedHandler)
+      document.addEventListener("visibilitychange", this.pageChangeHandler)
+      this.isBound = true
+    }
   }
 
   unbind() {
-    document.removeEventListener("keydown", this.keyPressedHandler)
-    document.removeEventListener("keyup", this.keyReleasedHandler)
-    document.removeEventListener("visibilitychange", this.pageChangeHandler)
+    if (this.isBound) {
+      document.removeEventListener("keydown", this.keyPressedHandler)
+      document.removeEventListener("keyup", this.keyReleasedHandler)
+      document.removeEventListener("visibilitychange", this.pageChangeHandler)
+      this.isBound = false
+    }
   }
 }
