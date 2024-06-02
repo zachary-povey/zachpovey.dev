@@ -32,34 +32,7 @@
       <p>[s] - Start Menu</p>
     </div>
   </div>
-  <script type="module">
-    import { startGameLoop } from "./cv_island/gameloop.js"
-    import { resize } from "./cv_island/resize.js"
-
-    const gameContainer = document.getElementById("game-container")
-    const canvas = document.getElementById("game-canvas")
-    const overlay = document.getElementById("overlay")
-
-    const context = canvas.getContext("2d", {
-      alpha: false,
-    })
-
-    window.addEventListener("resize", () => {
-      resize(gameContainer, canvas)
-    })
-    window.addEventListener("hideOverlay", () => {
-      overlay.classList.add("invisible")
-    })
-    window.addEventListener("unhideOverlay", () => {
-      overlay.classList.remove("invisible")
-    })
-
-    resize(gameContainer, canvas)
-    await startGameLoop({
-      context,
-      gameContainer,
-    })
-  </script>
+  <script type="module" src="/cv_island/index.js"></script>
 </body>
 
 </html>
