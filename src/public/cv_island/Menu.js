@@ -97,6 +97,7 @@ export class Menu {
   deactivate() {
     window.dispatchEvent(new CustomEvent("unhideOverlay"))
     this.removeActionButtonCallbacks()
+    this.closeButton.removeCallback("exitMenu")
     this.upHandler.unbind()
     this.downHandler.unbind()
     this.container.remove()
