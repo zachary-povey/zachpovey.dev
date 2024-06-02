@@ -163,9 +163,9 @@ class Statement {
     if (this.button) {
       this.button.style = '--image: url("../cv_island/artwork/images/ui/tick_pushed.png")'
     }
+    this.terminationButton.removeCallback("skipToDialogEnd")
+    this.terminationButton.removeCallback("closeDialog")
     setTimeout(() => {
-      this.terminationButton.removeCallback("skipToDialogEnd")
-      this.terminationButton.removeCallback("closeDialog")
       this.paragraph.remove()
       if (this.button) {
         this.button.remove()
