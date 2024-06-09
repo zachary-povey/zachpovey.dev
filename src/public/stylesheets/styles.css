@@ -196,7 +196,7 @@ image {
     "title title"
     "message message"
     "reply_to send";
-  grid-template-rows: min-content 1fr 10%;
+  grid-template-rows: min-content 1fr 15%;
   grid-template-columns: 1fr 10%;
   row-gap: 1%;
   column-gap: 5px;
@@ -214,7 +214,7 @@ image {
 }
 
 .contact-form-title {
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * 1.5);
   font-family: inherit;
   grid-area: title;
   height: min-content;
