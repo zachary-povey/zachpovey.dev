@@ -196,8 +196,8 @@ image {
     "title title"
     "message message"
     "reply_to send";
-  grid-template-rows: min-content 1fr minmax(50px, 100px);
-  grid-template-columns: 1fr minmax(100px, 200px);
+  grid-template-rows: min-content 1fr 10%;
+  grid-template-columns: 1fr 10%;
   row-gap: 1%;
   column-gap: 5px;
   position: absolute;
@@ -270,4 +270,23 @@ image {
   border: none;
   height: 100%;
   align-self: center;
+}
+
+
+.contact-form-back {
+  --image: url("../cv_island/artwork/images/ui/back_button.png");
+  grid-area: title;
+  background-image: var(--image);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  background-color: transparent;
+  border: none;
+  height: 90%;
+  width: 5%;
+  align-self: end;
+  justify-self: start;
+  padding: 0%;
+  margin-top: 8%;
 }

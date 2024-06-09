@@ -19,16 +19,34 @@ export function createContactForm(menu) {
     replyTo.setAttribute("placeholder", "Your email address")
 
 
-    const button = document.createElement("button")
-    button.classList.add("contact-form-send")
+    const sendButton = document.createElement("button")
+    sendButton.classList.add("contact-form-send")
 
-    const children = [title, message, replyTo, button]
+    const backButton = document.createElement("button")
+    backButton.classList.add("contact-form-back")
+
+    const children = [title, message, replyTo, sendButton, backButton]
 
     for (const child of children) {
         container.appendChild(child)
     }
 
-    button.addEventListener("click", () => {
+    backButton.addEventListener("click", () => {
+        pressButton(
+            {
+                button: backButton,
+                buttonName: "back_button",
+                callback: () => {
+                    setTimeout(() => {
+                        container.remove()
+                        menu.activate()
+                    }, 100)
+                }
+            }
+        )
+    })
+
+    sendButton.addEventListener("click", () => {
         fetch("/api/contact", {
             method: "POST",
             body: JSON.stringify({ message: message.value, from: replyTo.value }),
@@ -36,18 +54,11 @@ export function createContactForm(menu) {
                 "Content-Type": "application/json",
             },
         })
-        replyTo.value
-        transition(
+        pressButton(
             {
-                element: button,
-                styles: [
-                    '--image: url("../cv_island/artwork/images/ui/send_button_half_pressed.png")',
-                    '--image: url("../cv_island/artwork/images/ui/send_button_pressed.png")',
-                    '--image: url("../cv_island/artwork/images/ui/send_button_half_pressed.png")',
-                    '--image: url("../cv_island/artwork/images/ui/send_button.png")',
-                ],
-                wait_ms: 100,
-                then: () => {
+                button: sendButton,
+                buttonName: "send_button",
+                callback: () => {
                     for (const child of children) {
                         child.remove()
                     }
@@ -63,6 +74,22 @@ export function createContactForm(menu) {
             }
         )
     })
+}
+
+function pressButton({ button, buttonName, callback }) {
+    transition(
+        {
+            element: button,
+            styles: [
+                `--image: url("../cv_island/artwork/images/ui/${buttonName}_half_pressed.png")`,
+                `--image: url("../cv_island/artwork/images/ui/${buttonName}_pressed.png")`,
+                `--image: url("../cv_island/artwork/images/ui/${buttonName}_half_pressed.png")`,
+                `--image: url("../cv_island/artwork/images/ui/${buttonName}.png")`,
+            ],
+            wait_ms: 100,
+            then: callback
+        }
+    )
 }
 
 function transition({ element, styles, wait_ms, then }) {
