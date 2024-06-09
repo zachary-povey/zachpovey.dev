@@ -254,6 +254,15 @@ image {
   border: none;
 }
 
+.contact-form-final-message {
+  font-size: var(--font-size);
+  font-family: inherit;
+  grid-area: title;
+  height: min-content;
+  text-align: center;
+  margin: 0;
+}
+
 .contact-form-reply-to:focus {
   outline: none;
 }

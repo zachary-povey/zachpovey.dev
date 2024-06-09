@@ -46,8 +46,8 @@ export function createContactForm(menu) {
         )
     })
 
-    sendButton.addEventListener("click", () => {
-        fetch("/api/contact", {
+    sendButton.addEventListener("click", async () => {
+        const contactPromise = fetch("/api/contact", {
             method: "POST",
             body: JSON.stringify({ message: message.value, from: replyTo.value }),
             headers: {
@@ -58,18 +58,29 @@ export function createContactForm(menu) {
             {
                 button: sendButton,
                 buttonName: "send_button",
-                callback: () => {
+                callback: async () => {
                     for (const child of children) {
                         child.remove()
                     }
                     const title = document.createElement("h1")
-                    title.classList.add("contact-form-title")
-                    title.innerHTML = "Message received!\n The uh... 'real' me will be in touch soon."
+                    title.classList.add("contact-form-final-message")
+                    let successfulContact
+                    try {
+                        contactResponse = await contactPromise
+                        successfulContact = contactResponse.ok
+                    }
+                    catch (error) {
+                        successfulContact = false
+                    }
+
+                    title.innerHTML = successfulContact ?
+                        "Message received!\n The uh... 'real' me will be in touch soon." :
+                        "Oh no... we seem to have had an issue making contact. Please make sure your email address is correct and give it another go."
                     container.appendChild(title)
                     setTimeout(() => {
                         container.remove()
                         menu.activate()
-                    }, 3000)
+                    }, 5000)
                 }
             }
         )
