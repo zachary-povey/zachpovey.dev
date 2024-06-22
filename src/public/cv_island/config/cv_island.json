@@ -77,9 +77,9 @@
       ]
     },
     {
-      "name": "aidan",
+      "name": "bati",
       "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/aidan.png",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/bati.png",
       "startingCell": {
         "nx": 13,
         "ny": 27
@@ -122,7 +122,7 @@
       "cutscene": [
         {
           "type": "character",
-          "name": "aidan",
+          "name": "bati",
           "action": "turn",
           "direction": "to-player"
         },
@@ -130,19 +130,22 @@
           "type": "dialog",
           "text": [
             {
-              "statement": "Y'allright? I'm Aidan, Zach's best friend. We were lab parters together for 3 years at university where we both studied physics."
+              "statement": "Y'allright? I'm Bati, Zach's best friend. We were lab partners together for three years at university where we both studied physics."
             },
             {
-              "statement": "Some amount of coding was taught as standard on our course, but as Zach's masters project involved simulating particle motions, he ended up learning quite a lot extra."
+              "statement": "We learnt to write some C as standard on our course, but Zach really seemed to enjoy it."
+            },
+            {
+              "statement": " So much so that he chose a computational master's project where he used C to simulate particle motions and python to visualise the results."
             }
           ]
         }
       ]
     },
     {
-      "name": "mark",
+      "name": "mick",
       "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/mark.png",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/mick.png",
       "startingCell": {
         "nx": 47,
         "ny": 27
@@ -170,7 +173,7 @@
       "cutscene": [
         {
           "type": "character",
-          "name": "mark",
+          "name": "mick",
           "action": "turn",
           "direction": "to-player"
         },
@@ -178,22 +181,22 @@
           "type": "dialog",
           "text": [
             {
-              "statement": "Hi there, my name's Mark. I was Zach's boss at Gazprom Energy where he worked as a Lead Analyst in the demand forecasting team."
+              "statement": "Hi there, I'm Mick. I was Zach's boss at Gazprom Energy where he worked as a Lead Analyst in the demand forecasting team."
             },
             {
               "statement": "The forecasting team end up doing a blend of some data analysis, data science and software development."
             },
             {
-              "statement": "Zach was responsible for the UK gas forecast and other associated reporting, and ended up mainly doing software development which was the area he was most interested in."
+              "statement": "Zach was mostly interested in the software engineering and became responsible for the UK gas forecast and other associated reporting."
             }
           ]
         }
       ]
     },
     {
-      "name": "alicia",
+      "name": "cecilia",
       "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/alicia.png",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/cecilia.png",
       "startingCell": {
         "nx": 46,
         "ny": 46
@@ -231,7 +234,7 @@
       "cutscene": [
         {
           "type": "character",
-          "name": "alicia",
+          "name": "cecilia",
           "action": "turn",
           "direction": "to-player"
         },
@@ -239,7 +242,7 @@
           "type": "dialog",
           "text": [
             {
-              "statement": "Hello! I'm Alicia, Zach's partner."
+              "statement": "Hello! I'm Cecilia, Zach's partner."
             },
             {
               "statement": "When we're not working we like playing board games and socialising with friends..."
@@ -252,9 +255,9 @@
       ]
     },
     {
-      "name": "jess",
+      "name": "fliss",
       "dataFilepath": "./cv_island/artwork/data/characters/modern_interiors.json",
-      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/jess.png",
+      "imageFilepath": "./cv_island/artwork/images/characters/modern_interiors/fliss.png",
       "startingCell": {
         "nx": 10,
         "ny": 36
@@ -297,7 +300,7 @@
       "cutscene": [
         {
           "type": "character",
-          "name": "jess",
+          "name": "fliss",
           "action": "turn",
           "direction": "to-player"
         },
@@ -305,13 +308,13 @@
           "type": "dialog",
           "text": [
             {
-              "statement": "'Ey Up. I'm Jess - Zach's big sister."
+              "statement": "'Ey Up. I'm Fliss - Zach's big sister."
             },
             {
-              "statement": "We grew up on the coast in the Westcountry. That's probably where Zach's love of the water comes from, he and my other brother like to go kayaking when they can."
+              "statement": "We grew up on the coast in south west of England. That's probably where Zach's love of the water comes from."
             },
             {
-              "statement": "In 2017 they kayaked the length of the river shannon in Ireland, wild camping all the way down."
+              "statement": "In 2017, Zach and my other brother kayaked the length of the River Shannon in Ireland, wild camping the whole way to Limerick."
             }
           ]
         }
